@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Contact Us</title>
+</head>
+<body>
+  <!-- Navbar (same as the other page) -->
+  <div class="wrapper">
+    <nav class="navbar navbar-dark bg-dark ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/favicon.ico" alt="logo" height="60"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Games Schedule</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="charts.html">Charts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- FAQ Dropdown Section -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      
+      <div class="d-flex flex-column align-items-center"> <!-- Flex container to center content -->
+        
+        <!-- FAQ Dropdown 1 -->
+        <div class="dropdown mb-3">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="faqDropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+            What payment methods do you accept?
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="faqDropdown1">
+            <li><span class="dropdown-item-text">We accept various payment methods including credit cards, PayPal, and bank transfers.</span></li>
+          </ul>
+        </div>
+        
+        <!-- FAQ Dropdown 2 -->
+        <div class="dropdown mb-3">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="faqDropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+            How can I track my order?
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="faqDropdown2">
+            <li><span class="dropdown-item-text">Once your order has shipped, you will receive an email with tracking information.</span></li>
+          </ul>
+        </div>
+        
+        <!-- FAQ Dropdown 3 -->
+        <div class="dropdown mb-3">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="faqDropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+            Do you offer technical support?
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="faqDropdown3">
+            <li><span class="dropdown-item-text">Yes, we offer 24/7 technical support for all our products.</span></li>
+          </ul>
+        </div>
+        
+      </div> <!-- End of Flex container -->
+    
+    </div>
+    
+
+
+    <!-- Page Content -->
+    <div class="container my-5 ">
+      <h1 class="text-center ">Contact Us</h1>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <!-- Contact Form -->
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <!-- Dropdown Button -->
+            <div class="mb-3">
+              <label for="subjectDropdown" class="form-label">Subject</label>
+              <select class="form-select" id="subjectDropdown" required>
+                <option selected disabled value="">Choose...</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="sales">Sales</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Your message here" required></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-dark btn-lg">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Puzzle Verification Section -->
+    <h2 class="text-center">Prove You Are Human By Solving This Puzzle</h2>
+    <div id="board"></div>
+    
+    
+</div>
+
+</div>
+
+  </div>
+  
+
+  <!-- Footer (same as the other page) -->
+  <footer class="site-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row text-center">
+                <div class="footer-widget col-md-4">
+                    <h4>About Us</h4>
+                    <p>Our mission is to provide the best sports news, fixtures, and game analysis.</p>
+                </div>
+                <div class="footer-widget col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#news">Latest News</a></li>
+                        <li><a href="#events">Upcoming Events</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget col-md-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                      <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                      <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                      <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="text-center">
+            <p>&copy; 2023 Your Sports Site. All Rights Reserved.</p>
+        </div>
+    </div>
+  </footer>
+    
+  
+  <script src="puzzle.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

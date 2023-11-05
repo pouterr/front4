@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Charts</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-dark bg-dark ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="images/favicon.ico" alt="logo" height="60"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Games Schedule</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="charts.html">Charts</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <div class="mt-5">
+            <h2 class="text-center">Website Traffic</h2>
+            <canvas id="barChart"></canvas>
+        </div>
+        
+        <div class="mt-5">
+            <h2 class="text-center">Page Views Distribution</h2>
+            <canvas id="pieChart"></canvas>
+        </div>
+        <script>
+            // Bar chart data and initialization
+            var barCtx = document.getElementById('barChart').getContext('2d');
+            var barChart = new Chart(barCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Home', 'About Us', 'Products', 'Contact'],
+                    datasets: [{
+                        label: 'Page Views',
+                        data: [50, 150, 120, 170],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        
+            // Pie chart data and initialization
+            var pieCtx = document.getElementById('pieChart').getContext('2d');
+            var pieChart = new Chart(pieCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['New Visitors', 'Returning Visitors'],
+                    datasets: [{
+                        data: [300, 50],
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                }
+            });
+        </script>
+                
+    </div>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="footer-widget col-md-4">
+                        <h4>About Us</h4>
+                        <p>Our mission is to provide the best sports news, fixtures, and game analysis.</p>
+                    </div>
+                    <div class="footer-widget col-md-4">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#news">Latest News</a></li>
+                            <li><a href="#events">Upcoming Events</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget col-md-4">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                          <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                          <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                          <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="text-center">
+                <p>&copy; 2023 Your Sports Site. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
